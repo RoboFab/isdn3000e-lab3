@@ -55,13 +55,9 @@ void task4() {
     bunnyPts->setEnabled(showPoints);
     bunny->setTransparency(alpha);
     bunnyPts->setPointRadius(pointRadius);
-
     // TODO 1: Set the initial appearance of the mesh.
     //  - You must explicitly call: setSurfaceColor(), setPosition() or translate() to define the starting color and location of the object.
     //  - You can set the input color or position value by {0.1, 0.1, 0.1}
-    bunny->setSurfaceColor({0.5, 1.0, 1.0});
-    bunny->setPosition({0.1, 0.1, 0.1});
-    bunny->translate({0.1, 0.1, 0.1});
 
 
     // ============================================================
@@ -71,7 +67,6 @@ void task4() {
 
         // TODO 2: Add a title text to the UI window using ImGui::Text(). The title should describe what this control panel is for.
 
-        ImGui::Text("Task4: Bunny Controls");
         ImGui::Separator();
 
         bool changed = false;
@@ -84,30 +79,12 @@ void task4() {
         //      - ONE Button (e.g. reset button to set all properties back to initial values)
         //  - You may control ANY property of the mesh (e.g., position, color, rotation, size, transparency, etc.)
 
-        if (ImGui::Checkbox("Show Points", &showPoints))
-            changed = true;
-        if (ImGui::SliderFloat("Transparency", &alpha, 0.0f, 1.0f))
-            changed = true;
-        if (ImGui::SliderFloat("Point Radius", &pointRadius, 0.0001f, 0.01f))
-            changed = true;
-        if (ImGui::Button("Reset")) {
-            showMesh = true;
-            showPoints = true;
-            alpha = 0.5f;
-            pointRadius = 0.001f;
-            changed = true;
-        }
+
 
         // TODO 4: Use the 'changed' variable to update the object properties.
         //  - When the UI value changes, apply the new settings so that the object updates dynamically every frame.
         //  - You can start with a "if (changed) { ... }"
 
-        if (changed) {
-            bunny->setEnabled(showMesh);
-            bunnyPts->setEnabled(showPoints);
-            bunny->setTransparency(alpha);
-            bunnyPts->setPointRadius(pointRadius);
-        }
     };
 
     polyscope::show();

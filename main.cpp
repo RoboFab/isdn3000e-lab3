@@ -5,9 +5,9 @@
 
 int main() {
     // TODO: Don't forget to invoke the task function you are using
-    // task1();
+    task1();
     // task2();
     // task3();
-    task4();
+    // task4();
     return 0;
 }
