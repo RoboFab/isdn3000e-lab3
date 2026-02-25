@@ -70,17 +70,20 @@ void task4() {
     polyscope::state::userCallback = [&]() {
 
         // TODO 2: Add a title text to the UI window using ImGui::Text(). The title should describe what this control panel is for.
+
         ImGui::Text("Task4: Bunny Controls");
         ImGui::Separator();
 
         bool changed = false;
         if (ImGui::Checkbox("Show Mesh", &showMesh))
             changed = true;
+
         // TODO 3: Add at least:
         //      - ONE Checkbox (e.g. checkbox to show point cloud of the mesh)
         //      - ONE Slider (e.g. sliders to change transparency or point radius values)
         //      - ONE Button (e.g. reset button to set all properties back to initial values)
         //  - You may control ANY property of the mesh (e.g., position, color, rotation, size, transparency, etc.)
+
         if (ImGui::Checkbox("Show Points", &showPoints))
             changed = true;
         if (ImGui::SliderFloat("Transparency", &alpha, 0.0f, 1.0f))
@@ -98,6 +101,7 @@ void task4() {
         // TODO 4: Use the 'changed' variable to update the object properties.
         //  - When the UI value changes, apply the new settings so that the object updates dynamically every frame.
         //  - You can start with a "if (changed) { ... }"
+
         if (changed) {
             bunny->setEnabled(showMesh);
             bunnyPts->setEnabled(showPoints);

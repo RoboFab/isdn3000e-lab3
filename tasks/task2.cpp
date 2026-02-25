@@ -48,7 +48,7 @@ void task2() {
     polyscope::show();
 }
 
-// TODO 2: try to import Eigen and libigl in CMakeLists.txt and try to use methods from which to read and visualize the bunny.obj mesh.
+// TODO 2: import Eigen and libigl in CMakeLists.txt and use methods from those to read and visualize the bunny.obj mesh.
 
 // void task2() {
 //     polyscope::init();

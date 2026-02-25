@@ -29,14 +29,14 @@ FetchContent_MakeAvailable(eigen)
 FetchContent_MakeAvailable(libigl)
 
 add_executable(isdn3000e_lab3 main.cpp
-        src/task1.h
-        src/task1.cpp
-        src/task2.cpp
-        src/task2.h
-        src/task3.cpp
-        src/task3.h
-        src/task4.cpp
-        src/task4.h)
+        tasks//task1.h
+        tasks//task1.cpp
+        tasks//task2.cpp
+        tasks//task2.h
+        tasks//task3.cpp
+        tasks//task3.h
+        tasks//task4.cpp
+        tasks//task4.h)
 target_link_libraries(isdn3000e_lab3
         PRIVATE
         polyscope

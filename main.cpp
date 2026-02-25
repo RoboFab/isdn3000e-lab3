@@ -1,12 +1,13 @@
-#include "src/task1.h"
-#include "src/task2.h"
-#include "src/task3.h"
-#include "src/task4.h"
+#include "tasks/task1.h"
+#include "tasks/task2.h"
+#include "tasks/task3.h"
+#include "tasks/task4.h"
 
 int main() {
+    // TODO: Don't forget to invoke the task function you are using
     // task1();
-    task2();
+    // task2();
     // task3();
-    // task4();
+    task4();
     return 0;
 }
