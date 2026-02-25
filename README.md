@@ -1,6 +1,6 @@
-## X11 Configuration
+## ISDN3000e-Lab3
 
-### Issue
+### X11 Configuration Issue
 When building projects that use **Polyscope/GLFW**, you may encounter X11 error on Ubuntu/WSL. This happens because Polyscope depends on X11 for window creation, and the required development libraries are missing on your system.
 
 ### Solution
